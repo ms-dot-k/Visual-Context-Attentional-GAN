@@ -75,7 +75,7 @@ python train.py \
 --gpu 0,1,2,3
 ```
 
-```
+```shell
 # 1 GPU training example for GRID for unseen-speaker setting in GRID
 python train.py \
 --grid 'enter_the_processed_data_path' \
