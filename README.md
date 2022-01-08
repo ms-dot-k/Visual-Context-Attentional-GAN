@@ -138,6 +138,21 @@ Descriptions of training parameters are as follows:
 - `--gpu`: gpu number for training
 - Refer to `test.py` for the other parameters
 
+## Testing Automatic Speech Recognition (ASR) results: WER
+To test the model, run following command:
+```shell
+# Dataparallel test example for multi-speaker setting in GRID
+python main.py \
+--grid 'enter_the_processed_data_path' \
+--checkpoint 'enter_the_checkpoint_path' \
+--batch_size 80 \
+--subject 'overlap' \
+--save_mel \
+--save_wav \
+--dataparallel \
+--gpu 0,1
+```
+
 ## Citation
 If you find this work useful in your research, please cite the paper:
 ```
