@@ -4,6 +4,7 @@ This repository contains the PyTorch implementation of the following paper:
 > **Lip to Speech Synthesis with Visual-Context-Attentional-GAN**<br>
 > Minsu Kim, Joanna Hong, and Yong Man Ro<br>
 > Paper: https://proceedings.neurips.cc/paper/2021/file/16437d40c29a1a7b1e78143c9c38f289-Paper.pdf<br>
+> Demo Video: https://drive.google.com/file/d/1jkD6KAMYQ7BPD_Z8oiwhmkA-wa-UcaYF/view?usp=sharing<br>
 
 <div align="center"><img width="90%" src="img/Img.png?raw=true" /></div>
 
@@ -69,7 +70,7 @@ python train.py \
 --epochs 500 \
 --subject 'overlap' \
 --eval_step 720 \
---dataparallel True \
+--dataparallel \
 --gpu 0,1,2,3
 ```
 
@@ -82,7 +83,6 @@ python train.py \
 --epochs 500 \
 --subject 'unseen' \
 --eval_step 1000 \
---dataparallel False \
 --gpu 0
 ```
 
@@ -92,7 +92,6 @@ Descriptions of training parameters are as follows:
 - `--checkpoint` : saved checkpoint where the training is resumed from
 - `--batch_size`: batch size 
 - `--epochs`: number of epochs 
-- `--mode`: train / val / test
 - `--augmentations`: whether performing augmentation
 - `--dataparallel`: Use DataParallel
 - `--subject`: different speaker settings, `s#` is speaker specific training, `overlap` for multi-speaker setting, `unseen` for unseen-speaker setting, `four` for four speaker training
@@ -102,80 +101,43 @@ Descriptions of training parameters are as follows:
 - `--window_size`: number of frames to be used for training
 - Refer to `train.py` for the other training parameters
 
-The evaluation during training is performed for a subset of validation dataset due to heavy time costs of waveform conversion (griffin-lim). <br>
-In order to evaluate the entire performance of trained model run the below test code.
+The evaluation during training is performed for a subset of the validation dataset due to the heavy time costs of waveform conversion (griffin-lim). <br>
+In order to evaluate the entire performance of the trained model run the below test code.
 
 ## Testing the Model
 To test the model, run following command:
 ```shell
-# Testing example for LRW
+# Dataparallel test example for multi-speaker setting in GRID
 python main.py \
---lrw 'enter_data_path' \
+--grid 'enter_the_processed_data_path' \
 --checkpoint 'enter_the_checkpoint_path' \
 --batch_size 80 \
---mode test --radius 16 --n_slot 88 \
---test_aug True --distributed False --dataparallel False \
---gpu 0
+--subject 'overlap' \
+--save_mel \
+--save_wav \
+--dataparallel \
+--gpu 0,1
 ```
+
 Descriptions of training parameters are as follows:
-- `--lrw`: training dataset location (lrw)
-- `--checkpoint`: the checkpoint file
-- `--batch_size`: batch size  `--mode`: train / val / test
-- `--test_aug`: whether performing test time augmentation  `--distributed`: Use DataDistributedParallel  `--dataparallel`: Use DataParallel
-- `--gpu`: gpu for using `--lr`: learning rate `--n_slot`: memory slot size `--radius`: scaling factor for addressing score
-- Refer to `test.py` for the other testing parameters
-
-## Pretrained Models
-You can download the pretrained models. <br>
-Put the ckpt in './data/'
-
-**Bi-GRU Backend**
-- https://drive.google.com/file/d/1wkgkRWxu7JM0uaNHmcyCpvVz9OFar8Do/view?usp=sharing <br>
-
-To test the pretrained model, run following command:
-```shell
-# Testing example for LRW
-python main.py \
---lrw 'enter_data_path' \
---checkpoint ./data/GRU_Back_Ckpt.ckpt \
---batch_size 80 --backend GRU\
---mode test --radius 16 --n_slot 88 \
---test_aug True --distributed False --dataparallel False \
---gpu 0
-```
-
-**MS-TCN Backend**
-- https://drive.google.com/file/d/1uHZbmk9fgMqYVfvaoMUe-9XlGvQnXEcS/view?usp=sharing
-
-To test the pretrained model, run following command:
-```shell
-# Testing example for LRW
-python main.py \
---lrw 'enter_data_path' \
---checkpoint ./data/MSTCN_Back_Ckpt.ckpt \
---batch_size 80 --backend MSTCN\
---mode test --radius 16 --n_slot 168 \
---test_aug True --distributed False --dataparallel False \
---gpu 0
-```
-
-|       Architecture      |   Acc.   |
-|:-----------------------:|:--------:|
-|Resnet18 + MS-TCN + Multi-modal Mem   |   85.864    |
-|Resnet18 + Bi-GRU + Multi-modal Mem   |   85.408    |
-
-## AVSR
-You can also use the pre-trained model to perform Audio Visual Speech Recognition (AVSR), since it is trained with both audio and video inputs. <br>
-In order to use AVSR, just use ''tr_fusion'' (refer to the train code) for prediction.
+- `--grid`: Dataset location (grid)
+- `--checkpoint` : saved checkpoint where the training is resumed from
+- `--batch_size`: batch size 
+- `--dataparallel`: Use DataParallel
+- `--subject`: different speaker settings, `s#` is speaker specific training, `overlap` for multi-speaker setting, `unseen` for unseen-speaker setting, `four` for four speaker training
+- `--save_mel`: whether save the 'mel_spectrogram' and 'spectrogram' in `.npz` format
+- `--save_wav`: whether save the 'waveform' in `.wav` format
+- `--gpu`: gpu number for training
+- Refer to `test.py` for the other parameters
 
 ## Citation
 If you find this work useful in your research, please cite the paper:
 ```
-@inproceedings{kim2021multimodalmem,
-  title={Multi-Modality Associative Bridging Through Memory: Speech Sound Recollected From Face Video},
-  author={Kim, Minsu and Hong, Joanna and Park, Se Jin and Ro, Yong Man},
-  booktitle={Proceedings of the IEEE/CVF International Conference on Computer Vision},
-  pages={296--306},
+@article{kim2021vcagan,
+  title={Lip to Speech Synthesis with Visual Context Attentional GAN},
+  author={Kim, Minsu and Hong, Joanna and Ro, Yong Man},
+  journal={Advances in Neural Information Processing Systems},
+  volume={34},
   year={2021}
 }
 ```
