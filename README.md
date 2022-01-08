@@ -14,6 +14,7 @@ This repository contains the PyTorch implementation of the following paper:
 - pytorch 1.6 ~ 1.8
 - torchvision
 - torchaudio
+- ffmpeg
 - av
 - tensorboard
 - pillow
@@ -23,11 +24,20 @@ This repository contains the PyTorch implementation of the following paper:
 - scipy
 
 ### Datasets
-GRID dataset can be downloaded from the below link.
+GRID dataset (video normal) can be downloaded from the below link.
 - http://spandh.dcs.shef.ac.uk/gridcorpus/
 
-After download the dataset, preprocess the dataset with the following scripts.
 #### Preprocessing
+After download the dataset, preprocess the dataset with the following scripts.
+`Extract_frames.py` extract images and audio from the video. 
+It suppose the data dir as
+
+Data_dir
+├── subject
+|   ├── video
+|   |   └── xxx.mpg
+
+Data_dir/subject/video/mpg files
 
 ## Training the Model
 `main.py` saves the weights in `--checkpoint_dir` and shows the training logs in `./runs`.
