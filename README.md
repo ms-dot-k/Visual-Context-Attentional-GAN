@@ -133,8 +133,8 @@ Descriptions of training parameters are as follows:
 - `--batch_size`: batch size 
 - `--dataparallel`: Use DataParallel
 - `--subject`: different speaker settings, `s#` is speaker specific training, `overlap` for multi-speaker setting, `unseen` for unseen-speaker setting, `four` for four speaker training
-- `--save_mel`: whether save the 'mel_spectrogram' and 'spectrogram' in `.npz` format
-- `--save_wav`: whether save the 'waveform' in `.wav` format
+- `--save_mel`: whether to save the 'mel_spectrogram' and 'spectrogram' in `.npz` format
+- `--save_wav`: whether to save the 'waveform' in `.wav` format
 - `--gpu`: gpu number for training
 - Refer to `test.py` for the other parameters
 
