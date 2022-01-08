@@ -28,8 +28,7 @@ GRID dataset (video normal) can be downloaded from the below link.
 - http://spandh.dcs.shef.ac.uk/gridcorpus/
 
 #### Preprocessing
-After download the dataset, preprocess the dataset with the following scripts.
-`Extract_frames.py` extract images and audio from the video. 
+After download the dataset, preprocess the dataset with the following scripts.<br>
 It supposes the data directory is constructed as
 ```
 Data_dir
@@ -38,7 +37,11 @@ Data_dir
 |   |   └── xxx.mpg
 ```
 
-Data_dir/subject/video/mpg files
+1. Extract frames
+`Extract_frames.py` extract images and audio from the video. <br>
+```shell
+python Extract_frames.py --Grid_dir "Data dir of GRID_corpus" --Out_dir "Output dir of images and audio of GRID_corpus"
+```
 
 ## Training the Model
 `main.py` saves the weights in `--checkpoint_dir` and shows the training logs in `./runs`.
