@@ -59,6 +59,7 @@ python Preprocess.py \
 ```
 
 ## Training the Model
+The speaker setting (different subject) can be selected by `subject` argument. Please refer to below examples. <br>
 To train the model, run following command:
 
 ```shell
