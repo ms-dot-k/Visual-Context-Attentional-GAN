@@ -50,7 +50,10 @@ python Extract_frames.py --Grid_dir "Data dir of GRID_corpus" --Out_dir "Output 
 2. Align faces and audio processing <br>
 `Preprocess.py` align faces and generate videos. <br>
 ```shell
-python Preprocess.py --Data_dir "Data dir of extracted images and audio of GRID_corpus" --Landmark "Downloaded landmark dir of GRID" --Output_dir "Output dir of processed data"
+python Preprocess.py \
+--Data_dir "Data dir of extracted images and audio of GRID_corpus" \
+--Landmark "Downloaded landmark dir of GRID" \
+--Output_dir "Output dir of processed data"
 ```
 
 ## Training the Model
