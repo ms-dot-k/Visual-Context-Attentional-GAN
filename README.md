@@ -74,13 +74,13 @@ python train.py \
 ```
 
 ```
-# 1 GPU training example for GRID for multi-speaker setting in GRID
+# 1 GPU training example for GRID for unseen-speaker setting in GRID
 python train.py \
 --grid 'enter_the_processed_data_path' \
 --checkpoint_dir 'enter_the_path_for_save' \
 --batch_size 22 \
 --epochs 500 \
---subject 'overlap' \
+--subject 'unseen' \
 --eval_step 1000 \
 --dataparallel False \
 --gpu 0
@@ -101,6 +101,9 @@ Descriptions of training parameters are as follows:
 - `--eval_step`: steps for performing evaluation
 - `--window_size`: number of frames to be used for training
 - Refer to `train.py` for the other training parameters
+
+The evaluation during training is performed for a subset of validation dataset due to heavy time costs of waveform conversion (griffin-lim). <br>
+In order to evaluate the entire performance of trained model run the below test code.
 
 ## Testing the Model
 To test the model, run following command:
