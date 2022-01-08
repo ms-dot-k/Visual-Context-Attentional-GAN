@@ -95,7 +95,7 @@ Descriptions of training parameters are as follows:
 - `--mode`: train / val / test
 - `--augmentations`: whether performing augmentation
 - `--dataparallel`: Use DataParallel
-- `--subject`: different speaker settings, s# is speaker specific training, 'overlap' for multi-speaker setting, 'unseen' for unseen-speaker setting, 'four' for four speaker training
+- `--subject`: different speaker settings, `s#` is speaker specific training, `overlap` for multi-speaker setting, `unseen` for unseen-speaker setting, `four` for four speaker training
 - `--gpu`: gpu number for training
 - `--lr`: learning rate
 - `--eval_step`: steps for performing evaluation
