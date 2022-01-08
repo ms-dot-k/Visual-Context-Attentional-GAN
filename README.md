@@ -139,7 +139,10 @@ Descriptions of training parameters are as follows:
 - Refer to `test.py` for the other parameters
 
 ## Testing Automatic Speech Recognition (ASR) results: WER
-To test the model, run following command:
+Transcription of GRID dataset can be downloaded from the below link.
+- https://drive.google.com/file/d/1q_v4acR_xsHb75P09jKAAtNONVo35ueR/view?usp=sharing
+
+To evaluate the model, run following command:
 ```shell
 # Dataparallel test example for multi-speaker setting in GRID
 python main.py \
