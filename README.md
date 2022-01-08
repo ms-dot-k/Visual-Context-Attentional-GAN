@@ -103,7 +103,7 @@ Descriptions of training parameters are as follows:
 - Refer to `train.py` for the other training parameters
 
 The evaluation during training is performed for a subset of the validation dataset due to the heavy time costs of waveform conversion (griffin-lim). <br>
-In order to evaluate the entire performance of the trained model run the below test code.
+In order to evaluate the entire performance of the trained model run the test code (refer to "Testing the Model" section).
 
 ### check the training logs
 ```shell
