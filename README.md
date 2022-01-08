@@ -17,6 +17,7 @@ This repository contains the PyTorch implementation of the following paper:
 - ffmpeg
 - av
 - tensorboard
+- scikit-image
 - pillow
 - librosa
 - pystoi
@@ -26,6 +27,9 @@ This repository contains the PyTorch implementation of the following paper:
 ### Datasets
 GRID dataset (video normal) can be downloaded from the below link.
 - http://spandh.dcs.shef.ac.uk/gridcorpus/
+
+For data preprocessing, download the face landmark of GRID from the below link. 
+- https://drive.google.com/file/d/1MDLmREuqeWin6CituMn4Z_dhIIJAwDGo/view?usp=sharing
 
 #### Preprocessing
 After download the dataset, preprocess the dataset with the following scripts.<br>
@@ -37,10 +41,16 @@ Data_dir
 |   |   └── xxx.mpg
 ```
 
-1. Extract frames
+1. Extract frames <br>
 `Extract_frames.py` extract images and audio from the video. <br>
 ```shell
 python Extract_frames.py --Grid_dir "Data dir of GRID_corpus" --Out_dir "Output dir of images and audio of GRID_corpus"
+```
+
+2. Align faces and audio processing <br>
+`Preprocess.py` align faces and generate videos. <br>
+```shell
+python Preprocess.py --Data_dir "Data dir of extracted images and audio of GRID_corpus" --Landmark "Downloaded landmark dir of GRID" --Output_dir "Output dir of processed data"
 ```
 
 ## Training the Model
