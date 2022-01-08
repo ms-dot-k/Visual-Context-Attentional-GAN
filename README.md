@@ -105,6 +105,13 @@ Descriptions of training parameters are as follows:
 The evaluation during training is performed for a subset of the validation dataset due to the heavy time costs of waveform conversion (griffin-lim). <br>
 In order to evaluate the entire performance of the trained model run the below test code.
 
+### check the training logs
+```shell
+tensorboard --logdir='./runs/logs to watch' --host='ip address of the server'
+```
+The tensorboard shows the training and validation loss, evaluation metrics, generated mel-spectrogram, and audio
+
+
 ## Testing the Model
 To test the model, run following command:
 ```shell
