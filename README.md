@@ -30,12 +30,13 @@ GRID dataset (video normal) can be downloaded from the below link.
 #### Preprocessing
 After download the dataset, preprocess the dataset with the following scripts.
 `Extract_frames.py` extract images and audio from the video. 
-It suppose the data dir as
-
+It supposes the data directory is constructed as
+```
 Data_dir
 ├── subject
 |   ├── video
 |   |   └── xxx.mpg
+```
 
 Data_dir/subject/video/mpg files
 
