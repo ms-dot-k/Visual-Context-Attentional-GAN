@@ -58,37 +58,48 @@ python Preprocess.py \
 ```
 
 ## Training the Model
-`main.py` saves the weights in `--checkpoint_dir` and shows the training logs in `./runs`.
-
 To train the model, run following command:
+
 ```shell
-# Distributed training example for LRW
-python -m torch.distributed.launch --nproc_per_node='number of gpus' main.py \
---lrw 'enter_data_path' \
+# Data Parallel training example using 4 GPUs for multi-speaker setting in GRID
+python train.py \
+--grid 'enter_the_processed_data_path' \
 --checkpoint_dir 'enter_the_path_for_save' \
---batch_size 80 --epochs 200 \
---mode train --radius 16 --n_slot 88 \
---augmentations True --distributed True --dataparallel False\
---gpu 0,1...
+--batch_size 88 \
+--epochs 500 \
+--subject 'overlap' \
+--eval_step 720 \
+--dataparallel True \
+--gpu 0,1,2,3
 ```
 
-```shell
-# Data Parallel training example for LRW
-python main.py \
---lrw 'enter_data_path' \
+```
+# 1 GPU training example for GRID for multi-speaker setting in GRID
+python train.py \
+--grid 'enter_the_processed_data_path' \
 --checkpoint_dir 'enter_the_path_for_save' \
---batch_size 320 --epochs 200 \
---mode train --radius 16 --n_slot 88 \
---augmentations True --distributed False --dataparallel True \
---gpu 0,1...
+--batch_size 22 \
+--epochs 500 \
+--subject 'overlap' \
+--eval_step 1000 \
+--dataparallel False \
+--gpu 0
 ```
 
 Descriptions of training parameters are as follows:
-- `--lrw`: training dataset location (lrw)
+- `--grid`: Dataset location (grid)
 - `--checkpoint_dir`: directory for saving checkpoints
-- `--batch_size`: batch size  `--epochs`: number of epochs  `--mode`: train / val / test
-- `--augmentations`: whether performing augmentation  `--distributed`: Use DataDistributedParallel  `--dataparallel`: Use DataParallel
-- `--gpu`: gpu for using `--lr`: learning rate `--n_slot`: memory slot size `--radius`: scaling factor for addressing score
+- `--checkpoint` : saved checkpoint where the training is resumed from
+- `--batch_size`: batch size 
+- `--epochs`: number of epochs 
+- `--mode`: train / val / test
+- `--augmentations`: whether performing augmentation
+- `--dataparallel`: Use DataParallel
+- `--subject`: different speaker settings, s# is speaker specific training, 'overlap' for multi-speaker setting, 'unseen' for unseen-speaker setting, 'four' for four speaker training
+- `--gpu`: gpu number for training
+- `--lr`: learning rate
+- `--eval_step`: steps for performing evaluation
+- `--window_size`: number of frames to be used for training
 - Refer to `train.py` for the other training parameters
 
 ## Testing the Model
