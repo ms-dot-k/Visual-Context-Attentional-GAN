@@ -1,7 +1,7 @@
-# Lip to Speech Synthesis with Visual-Context-Attentional-GAN
+# Lip to Speech Synthesis with Visual Context Attentional GAN
 
 This repository contains the PyTorch implementation of the following paper:
-> **Lip to Speech Synthesis with Visual-Context-Attentional-GAN**<br>
+> **Lip to Speech Synthesis with Visual Context Attentional GAN**<br>
 > Minsu Kim, Joanna Hong, and Yong Man Ro<br>
 > \[[Paper](https://proceedings.neurips.cc/paper/2021/file/16437d40c29a1a7b1e78143c9c38f289-Paper.pdf)\] \[[Demo Video](https://drive.google.com/file/d/1jkD6KAMYQ7BPD_Z8oiwhmkA-wa-UcaYF/view?usp=sharing)\]
 
