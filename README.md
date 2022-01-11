@@ -142,7 +142,7 @@ Descriptions of training parameters are as follows:
 Transcription (Ground-truth) of GRID dataset can be downloaded from the below link.
 - https://drive.google.com/file/d/1q_v4acR_xsHb75P09jKAAtNONVo35ueR/view?usp=sharing
 
-Go to the ASR_model directory
+move to the ASR_model directory
 ```shell
 cd ASR_model/GRID
 ```
