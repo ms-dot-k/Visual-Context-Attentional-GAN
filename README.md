@@ -142,19 +142,28 @@ Descriptions of training parameters are as follows:
 Transcription (Ground-truth) of GRID dataset can be downloaded from the below link.
 - https://drive.google.com/file/d/1q_v4acR_xsHb75P09jKAAtNONVo35ueR/view?usp=sharing
 
-To evaluate the model, run following command:
+Go to the ASR_model directory
 ```shell
-# Dataparallel test example for multi-speaker setting in GRID
-python main.py \
---grid 'enter_the_processed_data_path' \
---checkpoint 'enter_the_checkpoint_path' \
---batch_size 80 \
---subject 'overlap' \
---save_mel \
---save_wav \
---dataparallel \
---gpu 0,1
+cd ASR_model/GRID
 ```
+
+To evaluate the WER, run following command:
+```shell
+# test example for multi-speaker setting in GRID
+python test.py \
+--data 'enter_the_generated_data_dir (mel or wav) (ex. ./../../test/spec_mel)' \
+--gtpath 'enter_the_downloaded_transcription_path' \
+--subject 'overlap' \
+--gpu 0
+```
+
+Descriptions of training parameters are as follows:
+- `--data`: Data for evaluation (wav or mel(.npz))
+- `--wav` : whether the data is waveform or not
+- `--batch_size`: batch size 
+- `--subject`: different speaker settings, `s#` is speaker specific training, `overlap` for multi-speaker setting, `unseen` for unseen-speaker setting, `four` for four speaker training
+- `--gpu`: gpu number for training
+- Refer to `./ASR_model/GRID/test.py` for the other parameters
 
 ## Citation
 If you find this work useful in your research, please cite the paper:
