@@ -165,6 +165,20 @@ Descriptions of training parameters are as follows:
 - `--gpu`: gpu number for training
 - Refer to `./ASR_model/GRID/test.py` for the other parameters
 
+
+### Pre-trained ASR model checkpoint
+Below lists are the pre-trained ASR model to evaluate the generated speech.
+WER shows the original performances of the model on ground-truth audio.
+
+|       Setting       |   WER   |
+|:-------------------:|:--------:|
+|GRID (constrained-speaker) |   [0.83 %](https://drive.google.com/file/d/1i73hVfC78r07EwKfnNtt8_vfMR9w51vx/view?usp=sharing)  |
+|GRID (multi-speaker)       |   [1.67 %](https://drive.google.com/file/d/14vKWXS22vKKzxPN2Uc-IXRQc-WQwbQ-1/view?usp=sharing)  |
+|GRID (unseen-speaker)      |   [0.37 %](https://drive.google.com/file/d/17EAciXs6xUzI80OyB0_ekjHzJmg4pQ1b/view?usp=sharing)  |
+|LRW                        |   [1.54 %](https://drive.google.com/file/d/1F6FozeiSbZ_HjqqA-W4-qjFvWrjCHLrG/view?usp=sharing)  |
+
+Put the checkpoints in `./ASR_model/GRID/data` for GRID, and in `./ASR_model/LRW/data` for LRW.
+
 ## Citation
 If you find this work useful in your research, please cite the paper:
 ```
