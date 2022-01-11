@@ -50,7 +50,7 @@ python Extract_frames.py --Grid_dir "Data dir of GRID_corpus" --Out_dir "Output 
 ```
 
 2. Align faces and audio processing <br>
-`Preprocess.py` align faces and generate videos, which enables cropping the video lip-centered during training. <br>
+`Preprocess.py` aligns faces and generates videos, which enables cropping the video lip-centered during training. <br>
 ```shell
 python Preprocess.py \
 --Data_dir "Data dir of extracted images and audio of GRID_corpus" \
