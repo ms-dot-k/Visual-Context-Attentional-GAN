@@ -66,7 +66,7 @@ To train the model, run following command:
 # Data Parallel training example using 4 GPUs for multi-speaker setting in GRID
 python train.py \
 --grid 'enter_the_processed_data_path' \
---checkpoint_dir 'enter_the_path_for_save' \
+--checkpoint_dir 'enter_the_path_to_save' \
 --batch_size 88 \
 --epochs 500 \
 --subject 'overlap' \
@@ -79,7 +79,7 @@ python train.py \
 # 1 GPU training example for GRID for unseen-speaker setting in GRID
 python train.py \
 --grid 'enter_the_processed_data_path' \
---checkpoint_dir 'enter_the_path_for_save' \
+--checkpoint_dir 'enter_the_path_to_save' \
 --batch_size 22 \
 --epochs 500 \
 --subject 'unseen' \
@@ -116,10 +116,10 @@ The tensorboard shows the training and validation loss, evaluation metrics, gene
 To test the model, run following command:
 ```shell
 # Dataparallel test example for multi-speaker setting in GRID
-python main.py \
+python test.py \
 --grid 'enter_the_processed_data_path' \
 --checkpoint 'enter_the_checkpoint_path' \
---batch_size 80 \
+--batch_size 100 \
 --subject 'overlap' \
 --save_mel \
 --save_wav \
