@@ -6,7 +6,7 @@ This repository contains the PyTorch implementation of the following paper:
 > Paper: https://proceedings.neurips.cc/paper/2021/file/16437d40c29a1a7b1e78143c9c38f289-Paper.pdf<br>
 > Demo Video: https://drive.google.com/file/d/1jkD6KAMYQ7BPD_Z8oiwhmkA-wa-UcaYF/view?usp=sharing<br>
 
-<div align="center"><img width="90%" src="img/Img.png?raw=true" /></div>
+<div align="center"><img width="90%" src="img/Img.PNG?raw=true" /></div>
 
 ## Preparation
 
