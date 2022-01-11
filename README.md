@@ -34,7 +34,7 @@ For data preprocessing, download the face landmark of GRID from the below link.
 - https://drive.google.com/file/d/1MDLmREuqeWin6CituMn4Z_dhIIJAwDGo/view?usp=sharing
 
 #### Preprocessing
-After download the dataset, preprocess the dataset with the following scripts.<br>
+After download the dataset, preprocess the dataset with the following scripts in `./preprocess`.<br>
 It supposes the data directory is constructed as
 ```
 Data_dir
