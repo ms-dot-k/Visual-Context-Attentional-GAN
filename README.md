@@ -167,7 +167,7 @@ Descriptions of training parameters are as follows:
 
 
 ### Pre-trained ASR model checkpoint
-Below lists are the pre-trained ASR model to evaluate the generated speech.
+Below lists are the pre-trained ASR model to evaluate the generated speech. <br>
 WER shows the original performances of the model on ground-truth audio.
 
 |       Setting       |   WER   |
