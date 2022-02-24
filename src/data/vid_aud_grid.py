@@ -53,18 +53,14 @@ class MultiDataset(Dataset):
                     file = l.strip().replace('mpg_6000/', '') + '.mp4'
                     file_list.append(os.path.join(grid, file))
         elif subject == 'unseen':
-            if mode == 'train':
-                with open('./data/unseen_train.txt', 'r') as f:
-                    lines = f.readlines()
-                for l in lines:
-                    file = l.strip().replace('mpg_6000/', '') + '.mp4'
-                    file_list.append(os.path.join(grid, file))
-            else:
-                with open('./data/unseen_val.txt', 'r') as f:
-                    lines = f.readlines()
-                for l in lines:
-                    file = l.strip().replace('mpg_6000/', '') + '.mp4'
-                    file_list.append(os.path.join(grid, file))
+            with open('./data/unseen_splits.txt', 'r') as f:
+                lines = f.readlines()
+            for l in lines:
+                if mode in l.strip():
+                    _, sub, fname = l.strip().split('/')
+                    file = f'{sub}/video/{fname}.mp4'
+                    if os.path.exists(os.path.join(grid, file)):
+                        file_list.append(os.path.join(grid, file))
         else:
             if mode == 'train':
                 with open('./data/train_4.txt', 'r') as f:
