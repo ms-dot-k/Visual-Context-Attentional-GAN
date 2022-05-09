@@ -35,7 +35,7 @@ class MultiDataset(Dataset):
         self.file_paths = self.build_file_list(grid, mode, subject)
         self.f_min = 55.
         self.f_max = 7500.
-        self.stft = TacotronSTFT(filter_length=640, hop_length=160, win_length=640, n_mel_channels=80, sampling_rate=16000, mel_fmin=self.f_min, mel_fmax=self.f_max)
+        self.stft = TacotronSTFT(filter_length=1024, hop_length=160, win_length=640, n_mel_channels=80, sampling_rate=16000, mel_fmin=self.f_min, mel_fmax=self.f_max)
 
     def build_file_list(self, grid, mode, subject):
         file_list = []
