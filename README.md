@@ -17,7 +17,8 @@ This repository contains the PyTorch implementation of the following paper:
 - ffmpeg
 - av
 - tensorboard
-- scikit-image
+- scikit-image 0.17.0 ~
+- opencv-python 3.4 ~
 - pillow
 - librosa
 - pystoi
