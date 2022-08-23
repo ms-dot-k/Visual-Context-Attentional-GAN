@@ -3,7 +3,7 @@
 This repository contains the PyTorch implementation of the following paper:
 > **Lip to Speech Synthesis with Visual Context Attentional GAN**<br>
 > Minsu Kim, Joanna Hong, and Yong Man Ro<br>
-> \[[Paper](https://proceedings.neurips.cc/paper/2021/file/16437d40c29a1a7b1e78143c9c38f289-Paper.pdf)\] \[[Demo Video](https://drive.google.com/file/d/1jkD6KAMYQ7BPD_Z8oiwhmkA-wa-UcaYF/view?usp=sharing)\]
+> \[[Paper](https://proceedings.neurips.cc/paper/2021/file/16437d40c29a1a7b1e78143c9c38f289-Paper.pdf)\] \[[Demo Video](https://kaistackr-my.sharepoint.com/:v:/g/personal/ms_k_kaist_ac_kr/EQp2Zao1ZQFDm9xDVuZubKIB_ns_6gk0L6LB3U5jd4jYKw?e=Qw8ddt)\]
 
 <div align="center"><img width="75%" src="img/Img.PNG?raw=true" /></div>
 
@@ -31,7 +31,7 @@ GRID dataset (video normal) can be downloaded from the below link.
 - http://spandh.dcs.shef.ac.uk/gridcorpus/
 
 For data preprocessing, download the face landmark of GRID from the below link. 
-- https://drive.google.com/file/d/1MDLmREuqeWin6CituMn4Z_dhIIJAwDGo/view?usp=sharing
+- https://kaistackr-my.sharepoint.com/:u:/g/personal/ms_k_kaist_ac_kr/EbK4hUUhTvRHqReb7xOsdiMBnnxuDXggEndY5RMvxn4-cw?e=DAIxfc
 
 #### Preprocessing
 After download the dataset, preprocess the dataset with the following scripts in `./preprocess`.<br>
@@ -140,7 +140,7 @@ Descriptions of training parameters are as follows:
 
 ## Test Automatic Speech Recognition (ASR) results of generated results: WER
 Transcription (Ground-truth) of GRID dataset can be downloaded from the below link.
-- https://drive.google.com/file/d/1q_v4acR_xsHb75P09jKAAtNONVo35ueR/view?usp=sharing
+- https://kaistackr-my.sharepoint.com/:u:/g/personal/ms_k_kaist_ac_kr/EaPzojxBUdJMqK3QOcIJxdMBVATSwhJTJ3-fEqF03j-zxQ?e=2tKz3y
 
 move to the ASR_model directory
 ```shell
@@ -172,10 +172,10 @@ WER shows the original performances of the model on ground-truth audio.
 
 |       Setting       |   WER   |
 |:-------------------:|:--------:|
-|GRID (constrained-speaker) |   [0.83 %](https://drive.google.com/file/d/1i73hVfC78r07EwKfnNtt8_vfMR9w51vx/view?usp=sharing)  |
-|GRID (multi-speaker)       |   [0.37 %](https://drive.google.com/file/d/14vKWXS22vKKzxPN2Uc-IXRQc-WQwbQ-1/view?usp=sharing)  |
-|GRID (unseen-speaker)      |   [1.67 %](https://drive.google.com/file/d/17EAciXs6xUzI80OyB0_ekjHzJmg4pQ1b/view?usp=sharing)  |
-|LRW                        |   [1.54 %](https://drive.google.com/file/d/1F6FozeiSbZ_HjqqA-W4-qjFvWrjCHLrG/view?usp=sharing)  |
+|GRID (constrained-speaker) |   [0.83 %](https://kaistackr-my.sharepoint.com/:u:/g/personal/ms_k_kaist_ac_kr/EdUNx1dK3y5MvEutqQwL0tsBTV9bE3SEt4xUCm4gzVYGYg?e=fHs0sI)  |
+|GRID (multi-speaker)       |   [0.37 %](https://kaistackr-my.sharepoint.com/:u:/g/personal/ms_k_kaist_ac_kr/EazjWfjz5EhPsZYdsXQ0mKgB8ShF6T9chG3GhmOCw_ylpg?e=AhSmuI)  |
+|GRID (unseen-speaker)      |   [1.67 %](https://kaistackr-my.sharepoint.com/:u:/g/personal/ms_k_kaist_ac_kr/EY2eYYQw0d1LjlRl1Vb1pLQBXGxrWhk5PlfURZMF4vjpeQ?e=D14kux)  |
+|LRW                        |   [1.54 %](https://kaistackr-my.sharepoint.com/:u:/g/personal/ms_k_kaist_ac_kr/EW05Nn8WNplHr7s36Zr9efoB6JNWzp3TDrYwN-i76GRj5A?e=D1CstD)  |
 
 Put the checkpoints in `./ASR_model/GRID/data` for GRID, and in `./ASR_model/LRW/data` for LRW.
 
