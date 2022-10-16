@@ -175,7 +175,7 @@ WER shows the original performances of the model on ground-truth audio.
 |GRID (constrained-speaker) |   [0.83 %](https://kaistackr-my.sharepoint.com/:u:/g/personal/ms_k_kaist_ac_kr/EdUNx1dK3y5MvEutqQwL0tsBTV9bE3SEt4xUCm4gzVYGYg?e=fHs0sI)  |
 |GRID (multi-speaker)       |   [0.37 %](https://kaistackr-my.sharepoint.com/:u:/g/personal/ms_k_kaist_ac_kr/EazjWfjz5EhPsZYdsXQ0mKgB8ShF6T9chG3GhmOCw_ylpg?e=AhSmuI)  |
 |GRID (unseen-speaker)      |   [1.67 %](https://kaistackr-my.sharepoint.com/:u:/g/personal/ms_k_kaist_ac_kr/EY2eYYQw0d1LjlRl1Vb1pLQBXGxrWhk5PlfURZMF4vjpeQ?e=D14kux)  |
-|LRW                        |   [1.58 %](https://kaistackr-my.sharepoint.com/:u:/g/personal/ms_k_kaist_ac_kr/EaWS9259StNAh81zPqNzdNIBNrPwqHbALTrRf3tq4_iHTw?e=KTgJbX)  |
+|LRW                        |   [1.57 %](https://kaistackr-my.sharepoint.com/:u:/g/personal/ms_k_kaist_ac_kr/EUeKrKUpqxpEkTsXBasHXSUBaCcF8bModCPDm8w3C7dnQw?e=tUYmNv)  |
 
 Put the checkpoints in `./ASR_model/GRID/data` for GRID, and in `./ASR_model/LRW/data` for LRW.
 The LRW checkpoint is modified from originally trained using torchvision to that using librosa library.
