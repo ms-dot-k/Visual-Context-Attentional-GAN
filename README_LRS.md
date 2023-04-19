@@ -1,4 +1,5 @@
 We provide the training code and trained VCA-GAN model on LRS2 and LRS3.
+The performances are reported in our ICASSP23 paper '[Lip-to-Speech Synthesis in the Wild with Multi-task Learning](https://arxiv.org/abs/2302.08841)'.
 ### Datasets
 #### Download
 LRS2/LRS3 dataset can be downloaded from the below link.
