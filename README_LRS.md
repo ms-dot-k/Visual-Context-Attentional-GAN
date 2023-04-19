@@ -31,6 +31,19 @@ LRS2-BBC_audio
 |   |   └── *.wav
 ```
 
+```
+LRS3-TED
+├── trainval
+|   ├── *
+|   |   └── *.mp4
+|   |   └── *.txt
+
+LRS2-TED_audio
+├── trainval
+|   ├── *
+|   |   └── *.wav
+```
+
 Moreover, put the train/val/test splits to <br>
 ```
 ./data/LRS2/*.txt
