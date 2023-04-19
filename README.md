@@ -27,7 +27,7 @@ This repository contains the PyTorch implementation of the following paper:
 Please refer [here](README_GRID.md) to run the code on GRID dataset.
 
 ## LRS2/LRS3
-Please refer [here](README_LRS.md) to run the code and model on LRS2 and LRS3 datasets/
+Please refer [here](README_LRS.md) to run the code and model on LRS2 and LRS3 datasets.
 
 ## Citation
 If you find this work useful in your research, please cite the papers:
