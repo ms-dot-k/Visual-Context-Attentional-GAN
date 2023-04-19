@@ -130,7 +130,7 @@ Descriptions of training parameters are as follows:
 - Refer to `test.py` for the other parameters
 
 
-### Pre-trained model checkpoints
+## Pre-trained model checkpoints
 We provide pre-trained VCA-GAN models trained on LRS2 and LRS3. <br>
 The performances are reported in our ICASSP23 [paper](https://arxiv.org/abs/2302.08841). 
 
