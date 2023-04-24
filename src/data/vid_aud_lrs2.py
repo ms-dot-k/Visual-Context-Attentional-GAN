@@ -162,6 +162,13 @@ class MultiDataset(Dataset):
 
         if self.sample_window:
             vid, melspec, spec, audio, crops = self.extract_window(vid, melspec, spec, audio, info, crops)
+        elif vid.size(0) > self.max_v_timesteps:
+            print('Sample is longer than Max video frames! Trimming to the length of ', self.max_v_timesteps)
+            vid = vid[:self.max_v_timesteps]
+            melspec = melspec[:, :, :int(self.max_v_timesteps * info['audio_fps'] / info['video_fps'] / 160)]
+            spec = spec[:, :, :int(self.max_v_timesteps * info['audio_fps'] / info['video_fps'] / 160)]
+            audio = audio[:, :int(self.max_v_timesteps * info['audio_fps'] / info['video_fps'])]
+            crops = crops[:self.max_v_timesteps * 2]
 
         num_v_frames = vid.size(0)
         vid = self.build_tensor(vid, crops)
