@@ -82,8 +82,6 @@ class MultiDataset(Dataset):
                     paths.append(f"{lrs2}/{file}")
 
         print(f'Mode: {mode}, File Num: {len(file_list)}')
-        file_list = file_list[:100]
-        paths = paths[:100]
         return paths, file_list, crops
 
     def build_tensor(self, frames, crops):
