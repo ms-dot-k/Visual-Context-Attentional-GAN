@@ -16,7 +16,12 @@ Unzip and put the files to
 ```
 
 #### Preprocessing
-After download the dataset, extract audio file (.wav) from the video.
+After download the dataset, extract audio file (.wav) from the video using `./preprocess/Extract_audio_LRS.py`.
+
+```shell
+python ./preprocess/Extract_audio_LRS.py --data_path 'original_video_path/LRS2-BBC' --save_path 'path_to_save/LRS2-BBC_audio' --data_type 'LRS2 or LRS3'
+```
+
 We suppose the data directory is constructed as
 ```
 LRS2-BBC
