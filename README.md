@@ -40,10 +40,12 @@ If you find this work useful in your research, please cite the papers:
   year={2021}
 }
 
-@article{kim2023lip,
-  title={Lip-to-Speech Synthesis in the Wild with Multi-task Learning},
+@inproceedings{kim2023lip,
+  title={Lip-to-speech synthesis in the wild with multi-task learning},
   author={Kim, Minsu and Hong, Joanna and Ro, Yong Man},
-  journal={arXiv preprint arXiv:2302.08841},
-  year={2023}
+  booktitle={ICASSP 2023-2023 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)},
+  pages={1--5},
+  year={2023},
+  organization={IEEE}
 }
 ```
