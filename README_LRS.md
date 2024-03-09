@@ -6,8 +6,8 @@ LRS2/LRS3 dataset can be downloaded from the below link.
 - https://www.robots.ox.ac.uk/~vgg/data/lip_reading/
 
 For data preprocessing, download the lip coordinate of LRS2 and LRS3 from the below links. 
-- [LRS2](https://kaistackr-my.sharepoint.com/:u:/g/personal/ms_k_kaist_ac_kr/EYr_pFzvluxJumdVbQ7c6iwB0Va7rRheS-NIZigZMejOyQ?e=WYsPvX)
-- [LRS3](https://kaistackr-my.sharepoint.com/:u:/g/personal/ms_k_kaist_ac_kr/EW05i6UFVVlPlpdyWEmSvtMBEelCSh6Wm2jJTw4MgIGwgQ?e=ReY3k4)
+- [LRS2](https://drive.google.com/file/d/10cnzNRRr-LQbS5kjc393FLvmNxPJ_u1N/view?usp=drive_link)
+- [LRS3](https://drive.google.com/file/d/10eAVKBuy7TyslcPdv4xmf5dxSYx4NMrS/view?usp=drive_link)
 
 Unzip and put the files to
 ```
@@ -58,7 +58,7 @@ Moreover, put the train/val/test splits to <br>
 ./data/LRS3/*.txt
 ```
 
-For the LRS2, we use the original splits of the dataset provided. [LRS2](https://kaistackr-my.sharepoint.com/:u:/g/personal/ms_k_kaist_ac_kr/EYr_pFzvluxJumdVbQ7c6iwB0Va7rRheS-NIZigZMejOyQ?e=WYsPvX) <br>
+For the LRS2, we use the original splits of the dataset provided. <br>
 For the LRS3, we use the unseen splits setting of [SVTS](https://arxiv.org/abs/2205.02058), where they are placed in the directory already.
 
 ## Training the Model
@@ -144,5 +144,5 @@ The performances are reported in our ICASSP23 [paper](https://arxiv.org/abs/2302
 
 |       Dataset       |   STOI   |
 |:-------------------:|:--------:|
-|LRS2 |   [0.407](https://kaistackr-my.sharepoint.com/:u:/g/personal/ms_k_kaist_ac_kr/EU6QAhptiR9Ns-WRVghuHYwBA_22Wp4EMr0O3LWZkQjnpw?e=qwkAu9)  |
-|LRS3 |   [0.474](https://kaistackr-my.sharepoint.com/:u:/g/personal/ms_k_kaist_ac_kr/EXnSqRowtL5PiOyk1UL2qK4BgmCvRF4WAZhmi5v6qY0RlA?e=XlBFGC)  |
+|LRS2 |   [0.407](https://drive.google.com/file/d/11ixych8CrmrrUWsHC35LG0nipFEOZw-W/view?usp=sharing)  |
+|LRS3 |   [0.474](https://drive.google.com/file/d/11jUyjr_hnsaeOzxUDcVywhUTl3lemXT5/view?usp=sharing)  |
