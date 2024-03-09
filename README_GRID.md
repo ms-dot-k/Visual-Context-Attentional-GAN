@@ -4,7 +4,7 @@ GRID dataset (video normal) can be downloaded from the below link.
 - http://spandh.dcs.shef.ac.uk/gridcorpus/
 
 For data preprocessing, download the face landmark of GRID from the below link. 
-- https://kaistackr-my.sharepoint.com/:u:/g/personal/ms_k_kaist_ac_kr/EbK4hUUhTvRHqReb7xOsdiMBnnxuDXggEndY5RMvxn4-cw?e=DAIxfc
+- https://drive.google.com/file/d/10upLpydfbqCJ7t64h210Xx-35B8qCcZr/view?usp=sharing
 
 #### Preprocessing
 After download the dataset, preprocess the dataset with the following scripts in `./preprocess`.<br>
@@ -113,7 +113,7 @@ Descriptions of training parameters are as follows:
 
 ## Test Automatic Speech Recognition (ASR) results of generated results: WER
 Transcription (Ground-truth) of GRID dataset can be downloaded from the below link.
-- https://kaistackr-my.sharepoint.com/:u:/g/personal/ms_k_kaist_ac_kr/EaPzojxBUdJMqK3QOcIJxdMBVATSwhJTJ3-fEqF03j-zxQ?e=2tKz3y
+- https://drive.google.com/file/d/112UES-N0OKjj0xV0hCDO9ZaOyPsvnJzR/view?usp=sharing
 
 move to the ASR_model directory
 ```shell
@@ -145,10 +145,10 @@ WER shows the original performances of the model on ground-truth audio.
 
 |       Setting       |   WER   |
 |:-------------------:|:--------:|
-|GRID (constrained-speaker) |   [0.83 %](https://kaistackr-my.sharepoint.com/:u:/g/personal/ms_k_kaist_ac_kr/EdUNx1dK3y5MvEutqQwL0tsBTV9bE3SEt4xUCm4gzVYGYg?e=fHs0sI)  |
-|GRID (multi-speaker)       |   [0.37 %](https://kaistackr-my.sharepoint.com/:u:/g/personal/ms_k_kaist_ac_kr/EazjWfjz5EhPsZYdsXQ0mKgB8ShF6T9chG3GhmOCw_ylpg?e=AhSmuI)  |
-|GRID (unseen-speaker)      |   [1.67 %](https://kaistackr-my.sharepoint.com/:u:/g/personal/ms_k_kaist_ac_kr/EY2eYYQw0d1LjlRl1Vb1pLQBXGxrWhk5PlfURZMF4vjpeQ?e=D14kux)  |
-|LRW                        |   [1.57 %](https://kaistackr-my.sharepoint.com/:u:/g/personal/ms_k_kaist_ac_kr/EUeKrKUpqxpEkTsXBasHXSUBaCcF8bModCPDm8w3C7dnQw?e=tUYmNv)  |
+|GRID (constrained-speaker) |   [0.83 %](https://drive.google.com/file/d/11OyjBnfLU7M3qt98udIkUiGZ6frHLwP1/view?usp=sharing)  |
+|GRID (multi-speaker)       |   [0.37 %](https://drive.google.com/file/d/113XmPNjlY7c1fSjUgf5IzJi1us7qVeX1/view?usp=sharing)  |
+|GRID (unseen-speaker)      |   [1.67 %](https://drive.google.com/file/d/11CAO_z_eUWcdGWPuVcCYy1mpEG2YghAT/view?usp=sharing)  |
+|LRW                        |   [1.57 %](https://drive.google.com/file/d/11erwY_Tf69OBfBSdZFwikmBXLI_G2YKb/view?usp=sharing)  |
 
 Put the checkpoints in `./ASR_model/GRID/data` for GRID, and in `./ASR_model/LRW/data` for LRW.<br>
 The LRW checkpoint is modified from originally trained using torchvision to that using librosa library.
